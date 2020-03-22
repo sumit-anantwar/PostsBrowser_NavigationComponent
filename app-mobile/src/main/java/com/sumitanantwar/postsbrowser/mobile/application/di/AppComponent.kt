@@ -35,6 +35,4 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
         fun build(): AppComponent
     }
 
-    fun inject(app: MainApplication)
-
 }

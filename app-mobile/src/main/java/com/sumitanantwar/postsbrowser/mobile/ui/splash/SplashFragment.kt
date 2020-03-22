@@ -30,7 +30,7 @@ class SplashFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        splashAnimationView.repeatCount = 3
         splashAnimationView.addAnimatorListener(AnimatorListenerAdapter(
             onEnd = {
                 Timber.d("Animation End")

@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PostsBrowser_AndroidNavigation.iml" filepath="$PROJECT_DIR$/.idea/PostsBrowser_AndroidNavigation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-mobile/app-mobile.iml" filepath="$PROJECT_DIR$/app-mobile/app-mobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvi/mvi.iml" filepath="$PROJECT_DIR$/mvi/mvi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repository/repository.iml" filepath="$PROJECT_DIR$/repository/repository.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repository-local/repository-local.iml" filepath="$PROJECT_DIR$/repository-local/repository-local.iml" />
-      <module fileurl="file://$PROJECT_DIR$/repository-network/repository-network.iml" filepath="$PROJECT_DIR$/repository-network/repository-network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PostsBrowser_AndroidNavigation.iml" filepath="$PROJECT_DIR$/.idea/PostsBrowser_AndroidNavigation.iml" group="PostsBrowser_AndroidNavigation" />
+      <module fileurl="file://$PROJECT_DIR$/app-mobile/app-mobile.iml" filepath="$PROJECT_DIR$/app-mobile/app-mobile.iml" group="PostsBrowser_AndroidNavigation/app-mobile" />
+      <module fileurl="file://$PROJECT_DIR$/mvi/mvi.iml" filepath="$PROJECT_DIR$/mvi/mvi.iml" group="PostsBrowser_AndroidNavigation/mvi" />
+      <module fileurl="file://$PROJECT_DIR$/presentation/presentation.iml" filepath="$PROJECT_DIR$/presentation/presentation.iml" group="PostsBrowser_AndroidNavigation/presentation" />
+      <module fileurl="file://$PROJECT_DIR$/repository/repository.iml" filepath="$PROJECT_DIR$/repository/repository.iml" group="PostsBrowser_AndroidNavigation/repository" />
+      <module fileurl="file://$PROJECT_DIR$/repository-local/repository-local.iml" filepath="$PROJECT_DIR$/repository-local/repository-local.iml" group="PostsBrowser_AndroidNavigation/repository-local" />
+      <module fileurl="file://$PROJECT_DIR$/repository-network/repository-network.iml" filepath="$PROJECT_DIR$/repository-network/repository-network.iml" group="PostsBrowser_AndroidNavigation/repository-network" />
     </modules>
   </component>
 </project>

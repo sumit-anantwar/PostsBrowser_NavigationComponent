@@ -16,8 +16,7 @@ object NetworkServiceFactory {
     fun baseUrl(isDebug: Boolean) =
         if (isDebug) {
             stagingUrl
-        }
-        else {
+        } else {
             productionUrl
         }
 
