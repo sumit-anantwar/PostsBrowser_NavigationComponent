@@ -6,9 +6,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation dependency.kotlin
-    implementation dependency.javaxInject
-    implementation dependency.rxKotlin
-    implementation dependency.rxJava
+    implementation dependency.javax_inject
+    implementation dependency.rx_kotlin
+    implementation dependency.rx_java
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

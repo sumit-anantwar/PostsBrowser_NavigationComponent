@@ -63,30 +63,34 @@ dependencies {
     implementation dependency.kotlin
 
     // AndroidX
-    implementation dependency.appCompat
+    implementation dependency.appcompat
+    implementation dependency.andx_core
+    implementation dependency.legacy_support
     implementation dependency.material
-    implementation dependency.constraintLayout
+    implementation dependency.nav_fragment
+    implementation dependency.nav_ui
     implementation dependency.lifecycle
-    implementation dependency.navigationFragment
-    implementation dependency.navigationUi
+    implementation dependency.constraintLayout
+    implementation dependency.nav_fragment_ktx
+    implementation dependency.nav_ui_ktx
 
     // RxJava
-    implementation dependency.rxAndroid
-    implementation dependency.rxKotlin
-    implementation dependency.rxBindings
+    implementation dependency.rx_android
+    implementation dependency.rx_kotlin
+    implementation dependency.rx_binding
 
     // Timber
     implementation dependency.timber
 
     // ButterKnife
-    implementation dependency.butterKnife
-    kapt dependency.butterKnifeCompiler
+    implementation dependency.butterknife
+    kapt dependency.butterknife_compiler
 
     implementation dependency.gson
 
     // Glide
     implementation dependency.glide
-    kapt dependency.glideCompiler
+    kapt dependency.glide_compiler
 
     // Stetho
     implementation dependency.stetho
@@ -97,10 +101,10 @@ dependencies {
 
     // Dagger
     implementation dependency.dagger
-    kapt dependency.daggerCompiler
-    implementation dependency.daggerAndroid
-    kapt dependency.daggerProcessor
-    compileOnly dependency.javaxAnnotation
+    kapt dependency.dagger_compiler
+    implementation dependency.dagger_android
+    kapt dependency.dagger_processor
+    compileOnly dependency.javax_annotation
 
 
     // Tests
@@ -108,22 +112,22 @@ dependencies {
     androidTestImplementation project(path: ':repository-network', configuration: 'testClasses')
 
     androidTestImplementation dependency.junit
-    androidTestImplementation dependency.mockitoAndroid
-    androidTestImplementation dependency.mockitoKotlin
+    androidTestImplementation dependency.mockito_android
+    androidTestImplementation dependency.mockito_kotlin
     androidTestImplementation 'com.linkedin.testbutler:test-butler-library:2.0.0'
-    androidTestImplementation (dependency.testRunner) {
+    androidTestImplementation (dependency.test_runner) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation (dependency.testRules) {
+    androidTestImplementation (dependency.test_rules) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation (dependency.espressoCore) {
+    androidTestImplementation (dependency.espresso_core) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation (dependency.espressoIntents) {
+    androidTestImplementation (dependency.espresso_intents) {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
-    androidTestImplementation (dependency.espressoContrib) {
+    androidTestImplementation (dependency.espresso_contrib) {
         exclude module: 'appcompat'
         exclude module: 'appcompat-v7'
         exclude module: 'support-v4'
@@ -133,11 +137,11 @@ dependencies {
         exclude module: 'design'
     }
 
-    kaptTest dependency.daggerCompiler
-    kaptAndroidTest dependency.daggerCompiler
+    kaptTest dependency.dagger_compiler
+    kaptAndroidTest dependency.dagger_compiler
 
     // Crashlytics
-    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
         transitive = true;
     }
 }

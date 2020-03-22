@@ -1,22 +1,13 @@
 package com.sumitanantwar.postsbrowser.mobile.application
 
 import android.app.Activity
-import android.app.Application
-import androidx.fragment.app.Fragment
 import com.crashlytics.android.Crashlytics
-
 import com.facebook.stetho.Stetho
 import com.sumitanantwar.postsbrowser.mobile.application.di.DaggerAppComponent
-
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import dagger.android.support.HasSupportFragmentInjector
 import io.fabric.sdk.android.Fabric
-
 import timber.log.Timber
-import javax.inject.Inject
 
 
 class MainApplication : DaggerApplication() {
@@ -34,7 +25,7 @@ class MainApplication : DaggerApplication() {
 
     //======= Static Accessor =======
     companion object {
-        fun get(activity: Activity) : MainApplication {
+        fun get(activity: Activity): MainApplication {
             return activity.application as MainApplication
         }
     }
@@ -53,7 +44,8 @@ class MainApplication : DaggerApplication() {
             Stetho.newInitializerBuilder(this)
                 .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                 .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
-                .build())
+                .build()
+        )
 
         // Plant a Timber Debug Tree
         Timber.plant(Timber.DebugTree())

@@ -35,17 +35,17 @@ dependencies {
     implementation dependency.kotlin
 
     implementation dependency.lifecycle
-    implementation dependency.appCompat
-    implementation dependency.daggerAndroid
+    implementation dependency.appcompat
+    implementation dependency.dagger_android
 
     // Rx
-    implementation dependency.rxKotlin
-    implementation dependency.rxJava
+    implementation dependency.rx_kotlin
+    implementation dependency.rx_java
 
     // Timber
     implementation dependency.timber
 
     // ButterKnife
-    implementation dependency.butterKnife
-    kapt dependency.butterKnifeCompiler
+    implementation dependency.butterknife
+    kapt dependency.butterknife_compiler
 }

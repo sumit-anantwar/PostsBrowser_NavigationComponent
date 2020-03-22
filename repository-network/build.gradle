@@ -27,18 +27,18 @@ dependencies {
     implementation dependency.kotlin
 
     // Retrofit
-    implementation dependency.moshiConverter
+    implementation dependency.moshi_converter
     implementation dependency.retrofit
-    implementation dependency.retrofitAdapter
-    implementation dependency.gsonConverter
-    implementation dependency.okHttpAndroid
-    implementation dependency.okHttpLogger
-    implementation dependency.javaxAnnotation
-    implementation dependency.javaxInject
+    implementation dependency.retrofit_adapter
+    implementation dependency.gson_converter
+    implementation dependency.okhttp_android
+    implementation dependency.okhttp_logger
+    implementation dependency.javax_annotation
+    implementation dependency.javax_inject
 
     // Tests
     testImplementation dependency.junit
-    testImplementation dependency.mockitoKotlin
+    testImplementation dependency.mockito_kotlin
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

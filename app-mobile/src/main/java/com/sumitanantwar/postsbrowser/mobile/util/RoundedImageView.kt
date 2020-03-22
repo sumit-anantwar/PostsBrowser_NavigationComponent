@@ -1,15 +1,15 @@
 package com.sumitanantwar.postsbrowser.mobile.util
 
-import android.graphics.RectF
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Path
+import android.graphics.RectF
 import android.util.AttributeSet
-import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 import com.sumitanantwar.postsbrowser.mobile.R
 
 
-class RoundedImageView : ImageView {
+class RoundedImageView : AppCompatImageView {
 
     private var cornerRadius: Int = 0
     private val framePath: Path
@@ -19,11 +19,17 @@ class RoundedImageView : ImageView {
 
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
 
-        val attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.RoundedImageView, defStyleAttr, 0)
+        val attributes = context.getTheme()
+            .obtainStyledAttributes(attrs, R.styleable.RoundedImageView, defStyleAttr, 0)
 
-        cornerRadius = attributes.getDimensionPixelSize(R.styleable.RoundedImageView_corner_radius, 0)
+        cornerRadius =
+            attributes.getDimensionPixelSize(R.styleable.RoundedImageView_corner_radius, 0)
 
         attributes.recycle()
 

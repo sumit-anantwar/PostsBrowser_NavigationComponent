@@ -12,22 +12,25 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
 import butterknife.BindView
 import butterknife.OnClick
-import com.jakewharton.rxbinding2.widget.RxTextView
+import com.jakewharton.rxbinding3.widget.textChanges
+
 import com.sumitanantwar.mvi.MviFragment
 import com.sumitanantwar.postsbrowser.mobile.R
 import com.sumitanantwar.postsbrowser.mobile.application.di.ViewModelFactory
 import com.sumitanantwar.postsbrowser.mobile.util.HeightProperty
 import com.sumitanantwar.presentation.model.Post
+import com.sumitanantwar.presentation.model.User
 import com.sumitanantwar.presentation.postslist.PostsListIntent
 import com.sumitanantwar.presentation.postslist.PostsListViewModel
 import com.sumitanantwar.presentation.postslist.PostsListViewState
-import com.sumitanantwar.presentation.model.User
 import com.sumitanantwar.repository.scheduler.SchedulerProvider
 import dagger.android.support.AndroidSupportInjection
 import io.reactivex.Observable
@@ -88,7 +91,8 @@ class PostsListFragment :
     }
 
     //======= Publishers =======
-    private val loadPostsWithFilterPublisher = PublishSubject.create<PostsListIntent.LoadPostsWithFilterIntent>()
+    private val loadPostsWithFilterPublisher =
+        PublishSubject.create<PostsListIntent.LoadPostsWithFilterIntent>()
     private val loadAllUsersPublisher = PublishSubject.create<PostsListIntent.LoadAllUsersIntent>()
 
 
@@ -138,15 +142,15 @@ class PostsListFragment :
     //======= Private Methods =======
     private fun rxSetup() {
 
-        val userIdObservable = RxTextView.textChanges(editTextUserId)
+        val userIdObservable = editTextUserId.textChanges()
             .map { it.toString() }
             .distinctUntilChanged()
 
-        val titleObservable = RxTextView.textChanges(editTextTitle)
+        val titleObservable = editTextTitle.textChanges()
             .map { it.toString() }
             .distinctUntilChanged()
 
-        val bodyObservable = RxTextView.textChanges(editTextBody)
+        val bodyObservable = editTextBody.textChanges()
             .map { it.toString() }
             .distinctUntilChanged()
 
@@ -248,7 +252,7 @@ class PostsListFragment :
 
     //======= MVI =======
     override fun bindIntents() {
-        viewModel.states().subscribe{
+        viewModel.states().subscribe {
             this.render(it)
         }.addTo(disposables)
 
@@ -309,7 +313,7 @@ class PostsListFragment :
         return loadPostsWithFilterPublisher
     }
 
-    private fun loadAllUsersIntent() : Observable<PostsListIntent.LoadAllUsersIntent> {
+    private fun loadAllUsersIntent(): Observable<PostsListIntent.LoadAllUsersIntent> {
         return loadAllUsersPublisher
     }
 }
