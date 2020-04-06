@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "601622956692",
+    "firebase_url": "https://postsbrowser.firebaseio.com",
+    "project_id": "postsbrowser",
+    "storage_bucket": "postsbrowser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601622956692:android:bec675a05d1d5beb964281",
+        "android_client_info": {
+          "package_name": "com.sumitanantwar.postsbrowser_mvi.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601622956692-q716gepatd4k3rbnl4lsrb4tajebbj0l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp4ZSuvSp7sePVI5iB9cSNyeuTxnvddhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601622956692-q716gepatd4k3rbnl4lsrb4tajebbj0l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
